@@ -1,0 +1,19 @@
+[
+    {
+        "titulo": "RTX 5090 disponible",
+        "texto": ["NovaCore incorpora a su catálogo la nueva generación de tarjetas gráficas de alto rendimiento, diseñadas para exprimir al máximo los ",
+                "juegos más exigentes y aplicaciones profesionales."],
+        "fecha": "2026-01-20"
+    },
+    {
+        "titulo": "Montaje Express",
+        "texto": ["En NovaCore entendemos que no quieres esperar para empezar a jugar. Por eso, ofrecemos un servicio de montaje rápido que garantiza tu PC ",
+                "completamente ensamblado, configurado y probado en un plazo máximo de 48 horas."],
+        "fecha": "2026-01-15"
+    },
+    {
+        "titulo": "Torneo NovaCore",
+        "texto": ["Este mes, NovaCore organiza un evento gaming especial pensado para reunir a la comunidad de jugadores y entusiastas del hardware."],
+        "fecha": "2026-01-10"
+    }
+]

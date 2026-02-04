@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Empresa dedicada a venta y montaje de PC's Gaming">
+		<meta name="Author" content="Rafael Salés Serrano">
+		<meta name="keywords" content="PC, Gaming, Videojuegos, Nova, NovaCore">
+		<meta name="revisit-after" content="2 days">
+		<meta name="category" content="NovaCore"> 
+
+		<title>NovaCore - Presupuesto</title>
+
+		<!-- Fuentes -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../css/estilos.css">
+
+		<!-- JS presupuesto -->
+		<script src="../js/presupuesto.js" defer></script>
+	</head>
+    <body>
+		<header class="lugar-header"></header>
+		  	<nav class="navbar">
+				<ul class="menu">
+					<li><a href="../index.html">Inicio</a></li>
+					<li><a href="galeria.html">Galería</a></li>
+					<li><a href="#" class="active">Presupuesto</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+			</nav>
+		<section class="presupuesto">
+			<h1>Presupuesto</h1>
+			<p>Rellena tus datos y selecciona la configuración para calcular el presupuesto.</p>
+		</section>
+		<form name="formulario" id="formulario" method="post" action="envio.html">
+			<!-- Parte 1: Datos de contacto -->
+			<div id="div_formulario">
+				<fieldset>
+					<legend>Datos de contacto</legend>
+					<label for="nombre">Nombre</label>
+					<input id="nombre" name="nombre" type="text" required maxlength="15" pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+( [A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)*$" placeholder="Ej. Laura">
+					
+					<label for="apellidos">Apellidos</label>
+					<input id="apellidos" name="apellidos" type="text" required maxlength="40" pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+( [A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)*$" placeholder="Ej. García López">
+					
+					<label for="telefono">Teléfono de contacto</label>
+					<input id="telefono" name="telefono" type="tel" required maxlength="9" pattern="^[0-9]{9}$" placeholder="Ej. 612345678">
+					
+					<label for="email">Correo electrónico</label>
+					<input id="email" name="email" type="email" pattern="^[^@\s]+@[^@\s]+\.[A-Za-z]+$" required placeholder="nombre@dominio.com">
+				</fieldset>
+			</div>
+			<!-- Parte 2: Pedido -->
+			<fieldset>
+				<legend>Pedido</legend>
+				<label for="producto">Producto</label>
+				<select id="producto" name="producto" required>
+					<option value="" disabled selected>Selecciona una opción</option>
+					<option value="899">Ordenador procesador Intel i5 (899€)</option>
+					<option value="1199">Ordenador procesador Intel i7 (1199€)</option>
+					<option value="949">Ordenador procesador AMD Ryzen 5 (949€)</option>
+					<option value="1299">Ordenador procesador AMD Ryzen 7 (1299€)</option>
+				</select>
+				
+				<label for="plazo">Plazo (meses)</label>
+				<input id="plazo" name="plazo" type="number" min="1" step="1" placeholder="Ej. 3" required>
+				
+				<div class="checkboxes">
+					<p>Extras:</p>
+					<label><input type="checkbox" name="extras" value="35"> Ventiladores adicionales (+35€)</label>
+					<label><input type="checkbox" name="extras" value="120"> Refrigeración líquida (+120€)</label>
+					<label><input type="checkbox" name="extras" value="25"> Iluminación LED (+25€)</label>
+					<label><input type="checkbox" name="extras" value="30"> Tarjeta de red (+30€)</label>
+				</div>
+				
+				<!-- Total -->
+				<label for="total">Presupuesto final</label>
+				<input id="total" name="total" type="text" value="0 €" readonly>
+				<small id="descuentoMensaje"></small>
+
+				<label class="privacidad" for="privacidad">
+					<input id="privacidad" type="checkbox" name="privacidad" required>
+					He leído y acepto la <a href="#" target="_blank">política de privacidad</a>
+				</label>
+			</fieldset>
+			
+			<button type="submit" disabled>Enviar</button> 
+			<!-- Se añade disabled al botón enviar para evitar el envío del formulario si hay algún campo vacío o mal relleno -->
+		</form>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="footer-contenido">
+				<!-- Columna 1: Marca -->
+				<div class="footer-col">
+					<h2>NovaCore</h2>
+					<p>Montaje y asesoramiento en equipos gaming de alto rendimiento. Creamos máquinas únicas para jugadores exigentes.</p>
+				</div>
+				<!-- Columna 2: Contacto -->
+				<div class="footer-col">
+					<h3>Contacto</h3>
+					<p>Calle Isaac Newton, nº 12<br> Cañamoon, La Rinconada (Sevilla)</p>
+					<p>954 123 456</p>
+					<p>contacto@novacore.es</p>
+				</div>
+				<!-- Columna 3: Redes -->
+				<div class="footer-col">
+					<h3>Síguenos</h3>
+					<div class="footer-redes">
+						<a href="#"><img src="../img/icono_ins.png" alt="Instagram"></a>
+						<a href="#"><img src="../img/icono_you.png" alt="Youtube"></a>
+						<a href="#"><img src="../img/icono_face.png" alt="Facebook"></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>© 2025 - 2026 NovaCore — Todos los derechos reservados · Aviso legal · Política de privacidad</p>
+			</div>
+		</footer>
+	</body>
+</html>
